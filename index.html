@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta property="og:image" content="">
+	<meta name="twitter:image" content="">
+
+	<title>
+		funny zone
+	</title>
+  
+  	<meta name="theme-color" content="#2e6b35"/>
+  
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet"> 
+		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" integrity="sha256-v00gso3ox/d0KLJDJew6+zm29+J39rYWZvOgoXzDtCs=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+	
+	<script src='https://kit.fontawesome.com/2b928b30d4.js' crossorigin='anonymous'></script>
+	<link rel="icon" 
+				type="image/gif" 
+				href="">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
+	<link href="./styles.css" rel="stylesheet"> 
+</head>
+
+<body>    
+	<div class="title">
+		<span class="title-top">You peer into the fates of a torn family...</span>
+		<span class="title-sub"></span>
+	</div>
+
+	<section id="audio-dialog">
+		<div>
+			<span>ENABLE AUDIO?</span>
+			<span style="font-size: 0.7em;font-style: italic;">(MUSIC + EFFECTS)</span>
+			<span class="choice">
+				<span id="yesaudio" class="ff">YES</span>
+				<span id="noaudio" class="ff">NO</span>
+			</span>
+		</div>
+	</section>
+
+	<section id="select">
+		<div id="char1" onclick="fadeTo(char1)">
+			<div class="scene" id="char1-scene">
+				<div class="title-overlay" data-depth="0.5">
+					<div class="inner-title">
+						<span class="title-top">The Skittish Scholar</span>
+						<span class="title-sub">A freakin fish</span>
+					</div>
+				</div>
+				<div class="imgwrapper" data-depth="0.1"><img src="./fishy1.png"></div>
+				<div class="imgwrapper" data-depth="0.1"><img src="./fishy2.png" class="hoverimg"></div>
+			</div>
+		</div>
+
+		<div id="char2" onclick="fadeTo(char2)">
+			<div class="scene" id="char2-scene">
+				<div class="title-overlay" data-depth="0.5">
+					<div class="inner-title">
+						<span class="title-top">The Eccentric Savant</span>
+						<span class="title-sub" >Haunted by toads</span>
+					</div>
+				</div>
+				<div class="imgwrapper" data-depth="0.1"><img src="./cat1.png"></div>
+				<div class="imgwrapper" data-depth="0.1"><img src="./cat2.png" class="hoverimg"></div>
+			</div>
+		</div>
+	</section>
+	
+	<span id="return" onclick="fadeTo(select)">CHARACTER SELECT</span>
+
+	<section id="char1-info" class="char-area ff">
+		<div class="scroller">
+			<h1 class="inner-title"><span class="title-top">char1 name</span></h1>
+			
+			<button class="collapsible ff">Summary</button>
+			<div class="content">
+				<p>i am content!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
+				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+			</div>
+			
+			<button class="collapsible ff">OOC</button>
+			<div class="content">
+				<p>cool cool cool freakin lipsom zone over here</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<ul>
+					<li>bullet point</li>
+					<li>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. </li>
+					<li>Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </li>
+				</ul>
+			</div>
+			
+			<button class="collapsible ff">Meta Info &amp; Arcs</button>
+			<div class="content">
+				<p>i am content!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
+				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+
+				<div class="arc">
+					<span class="arc-name"></span>
+
+				</div>
+			</div>
+			
+			<button class="collapsible ff">Relationships</button>
+			<div class="content relations">
+				<div class="relation ff">
+					<div class="relation-av ff"><img src="./av.png"></div>
+					<span class="relation-name inner-title">Toadakulus Xarganathotron</span>
+					<span class="relation-type">Fiend</span>
+					<span class="relation-summary">This thing is fucking crazy. It will not stop until all other eccentrics are dead and burned to ash. </span>
+				</div>
+
+				<div class="relation ff">
+					<div class="relation-av ff"><img src="./av.png"></div>
+					<span class="relation-name inner-title">the ghoul</span>
+					<span class="relation-type">Ally</span>
+					<span class="relation-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut volutpat ex, et tempus sem. Praesent varius augue vel pharetra interdum.<br><br>Mauris commodo ac diam sed bibendum. Cras euismod blandit eros vitae tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam est ut neque lacinia dignissim. Donec lacinia dictum rhoncus. </span>
+				</div>
+			</div>
+			
+			<button class="collapsible ff">Images</button>
+			<div class="content gallery">
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+			</div>
+
+			<button class="collapsible inventorycollapse ff">inventory</button>
+			<div class="inventory content">
+				<style> /* theoretical way to programmatically have this stuff as pseudoelements */
+					.slot.creature { background-image: url(./gear.gif);	}
+					.slot.creature:after { content: "THE COG"; }
+				</style>
+				<div class="slot creature filled"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="char2-info" class="char-area ff">
+		<div class="scroller">
+			<h1 class="inner-title"><span class="title-top">char1 name</span></h1>
+			
+			<button class="collapsible ff">Summary</button>
+			<div class="content">
+				<p>i am content!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
+				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+			</div>
+			
+			<button class="collapsible ff">OOC</button>
+			<div class="content">
+				<p>cool cool cool freakin lipsom zone over here</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<ul>
+					<li>bullet point</li>
+					<li>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. </li>
+					<li>Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </li>
+				</ul>
+			</div>
+			
+			<button class="collapsible ff">Meta Info &amp; Arcs</button>
+			<div class="content">
+				<p>i am content!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+			</div>
+			
+			<button class="collapsible ff">Relationships</button>
+			<div class="content">
+				<p>i am content!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
+				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+			</div>
+			
+			<button class="collapsible ff">Images</button>
+			<div class="content gallery">
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+			</div>
+
+			<button class="collapsible inventorycollapse ff">inventory</button>
+			<div class="inventory content">
+				<style> /* theoretical way to programmatically have this stuff as pseudoelements */
+					.slot.creature { background-image: url(./gear.gif);	}
+					.slot.creature:after { content: "THE COG"; }
+				</style>
+				<div class="slot creature filled"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+				<div class="slot"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="dialog">
+		<div class="closebar">
+			<div class="close ff"><i class="fas fa-times" aria-hidden="true"></i></div>
+		</div>
+		<h1 class="inner-title">The Cog</h1>
+		<div class="item-image ff"><img src="gear.gif"></div>
+		<div class="item-info ff">
+			<em>it spins it spins it spins it spins</em>
+			<p>The cog is a mysterious item that the character carries with them. The story says it’s a major league part of the Galactic War, but the fog of the universe clouds what has happened in the war and what the cog might be. </p>
+			<p>(an AI wrote this shit using the first 5 words)</p>
+		</div>
+	</section>
+
+	<div id="volume" class="ff">
+		<div id="credit"></div>
+		<div>
+			<i id='volume-toggle' class='fas fa-volume-off'></i>
+			<input type='range' min='0' max='1' value='" + volume + "' step='0.05' class='slider' id='volume-slider'>
+		</div>
+	</div>
+
+	<script>
+		const select = new Howl({
+			src: ['./pyre_life_sentence.mp3'],
+			loop: true,
+			volume: 0
+		});
+		select.credit = "Darren Korb - Life Sentence"
+
+		const char1 = new Howl({
+			src: ['./severance.mp3'],
+			loop: true,
+			volume: 0
+		});
+		char1.credit = "Joel Louviere / Sokkycakes - Severance"
+
+		const char2 = new Howl({
+			src: ['./martyrs_blood.mp3'],
+			loop: true,
+			volume: 0
+		});
+		char2.credit = "Corey Vitalis - Martyr's Blood"
+
+		Howler.volume(0);
+
+		var currentTheme = select;
+		var nextTheme;
+
+		var timeout = false;
+		function fadeTo(newTheme) {
+			$('body').addClass('track-transitioning');
+
+			timeout = true;
+			currentTheme.fade(1, 0, 1000);
+
+			let lastTheme = currentTheme;
+			setTimeout(function(){ lastTheme.pause(); }, 1100);
+
+			currentTheme = newTheme;
+			newTheme.play();
+			newTheme.fade(0, 1, 1000);
+			setTimeout(function(){ $('body').removeClass('track-transitioning'); }, 1100);
+
+			$('#credit').text(currentTheme.credit);
+		}
+
+
+		function endIntro() { 
+			$('body').removeClass('pre-select');
+			$('body').addClass('post-intro');
+			$('body').off('mousedown');
+		}		
+
+		$('#yesaudio, #noaudio').on('click', function(){
+			
+			$('body').addClass('pre-select');
+			$('body').on('mousedown', endIntro);
+			setTimeout(function(){
+				endIntro();
+			}, 5000);
+
+			Howler.volume(0);
+			currentTheme.play();
+			$('#credit').text(currentTheme.credit);
+			if($(this).attr('id') == "yesaudio") {
+				Howler.volume($('#volume-slider').val());
+
+				//in case of saved 0-vol
+				if(Howler.volume() == 0) {
+					Howler.volume(0.5)
+					$('#volume-slider').val(0.5);
+					$('#volume-slider').change();
+				}
+
+				currentTheme.fade(0.0, 1, 4000);
+			} else {
+				$('#volume-slider').val(0);
+			}
+		});
+
+		$('#char1, #char2').on('click', function(){
+			let id = $(this).attr('id');
+			$('body').attr('id', (id + "-selected"));
+			$("#" + id + "-info .collapsible:first-of-type").click();
+		});
+
+		$('#return').on('click', function(){
+			$('body').attr('id', 'loaded');
+			$('.active').click();
+		});
+
+		$('.inventorycollapse, #dialog .close').on('click', function(){
+			$('#dialog').removeClass('active');
+		});
+
+		$('.slot').on('click', function(){
+			$('#dialog').addClass('active');
+		})
+	
+		$('.gallery').magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			removalDelay: 300,
+			mainClass: 'mfp-fade',
+			gallery: {
+				enabled: true
+			},				
+			callbacks: {					
+				buildControls: function() {
+					// re-appends controls inside the main container
+					this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+				}
+			}
+		});
+
+		$('#volume-slider').on('change', function(){
+			Howler.volume($(this).val());
+		});
+		
+		$('#volume-toggle').on('click', function(){
+			if(volume > 0) {
+				volume = 0;
+				$('#credit').text(currentTheme.credit);
+			} else {
+				volume = 0.5;
+			}
+			$('#volume-slider').val(volume);
+			$('#volume-slider').change();
+		});
+
+		var scene1 = document.getElementById('char1-scene');
+		var parallaxInstance = new Parallax(scene1, {
+			relativeInput: true,
+			hoverOnly: true,
+			pointerEvents: true
+		});
+
+		var scene2 = document.getElementById('char2-scene');
+		var parallaxInstance = new Parallax(scene2, {
+			relativeInput: true,
+			hoverOnly: true,
+			pointerEvents: true
+		});
+
+		/* collapsibles */
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+				content.style.opacity = 0;
+				content.style.marginBottom = 0;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+				content.style.opacity = 1;
+				content.style.marginBottom = "10px";
+			} 
+		});
+		}
+	</script>
+
+</body>
+</html>
