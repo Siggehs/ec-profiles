@@ -1,7 +1,9 @@
 ---
 title: EC-OOC
 date: 2020-12-12 23:46:00 Z
+position: 1
 ---
+
 cool cool cool freakin lipsom zone over here
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis.
