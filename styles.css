@@ -359,28 +359,28 @@ body {
     background: tan;
 }
 
-.content strong {
+.content strong, .item-info strong {
     font-weight: 600;
 }
 
-.content em {
+.content em, .item-info em {
     font-style: italic;
 }
 
-.content h1 {
+.content h1, .item-info h1 {
     font-size: 2em;
 }
 
-.content h2 {
+.content h2, .item-info h2 {
     font-size: 1.5em;
     
 }
 
-.content h3 {
+.content h3, .item-info h3 {
     font-size: 1.25em;    
 }
 
-.content:not(.inventory):not(.gallery) > * {
+.content:not(.inventory):not(.gallery) > *, .item-info > * {
     margin: 10px 0;
 }
 
@@ -559,7 +559,16 @@ body {
     padding: 10px;
     margin: 20px 0;
     border-radius: 100%;
+    height: 12.5vw;
+    width: 12.5vw;
+    overflow: hidden;
 }
+  
+.item-image.ff::after {
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+}  
 
 .item-info {
     max-width: 600px;

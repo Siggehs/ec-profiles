@@ -124,11 +124,13 @@
 
 			<button class="collapsible inventorycollapse ff">inventory</button>
 			<div class="inventory content">
-				<style> /* theoretical way to programmatically have this stuff as pseudoelements */
-					.slot.creature { background-image: url(./gear.gif);	}
-					.slot.creature:after { content: "THE COG"; }
-				</style>
-				<div class="slot creature filled"></div>
+				{% for item in site.ss-items %}
+					<style> 
+						.slot.item-{{ item.slug }} { background-image: url({{ item.['image-url'] }}); }
+						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
+					</style>
+					<div class="slot item-{{ item.slug }} filled" data-char="ss-items" data-item="{{ item.slug }}"></div>
+				{% endfor %}
 				<div class="slot"></div>
 				<div class="slot"></div>
 				<div class="slot"></div>
@@ -182,11 +184,13 @@
 
 			<button class="collapsible inventorycollapse ff">inventory</button>
 			<div class="inventory content">
-				<style> /* theoretical way to programmatically have this stuff as pseudoelements */
-					.slot.creature { background-image: url(./gear.gif);	}
-					.slot.creature:after { content: "THE COG"; }
-				</style>
-				<div class="slot creature filled"></div>
+				{% for item in site.ec-items %}
+					<style> 
+						.slot.item-{{ item.slug }} { background-image: url({{ item.['image-url'] }}); }
+						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
+					</style>
+					<div class="slot item-{{ item.slug }} filled" data-char="ec-items" data-item="{{ item.slug }}"></div>
+				{% endfor %}
 				<div class="slot"></div>
 				<div class="slot"></div>
 				<div class="slot"></div>
@@ -202,13 +206,9 @@
 		<div class="closebar">
 			<div class="close ff"><i class="fas fa-times" aria-hidden="true"></i></div>
 		</div>
-		<h1 class="inner-title">The Cog</h1>
-		<div class="item-image ff"><img src="gear.gif"></div>
-		<div class="item-info ff">
-			<em>it spins it spins it spins it spins</em>
-			<p>The cog is a mysterious item that the character carries with them. The story says it’s a major league part of the Galactic War, but the fog of the universe clouds what has happened in the war and what the cog might be. </p>
-			<p>(an AI wrote this shit using the first 5 words)</p>
-		</div>
+		<h1 class="inner-title"></h1>
+		<div class="item-image ff"><img src=""></div>
+		<div class="item-info ff"></div>
 	</section>
 
 	<div id="volume" class="ff">
@@ -220,6 +220,28 @@
 	</div>
 
 	<script>
+		var items = {
+			"ss-items": {			
+			{% for item in site.ss-items %}
+				'{{ item.slug }}': {
+					title: "{{ item.title }}",
+					img: "{{ item['image-url'] }}",
+					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
+				},
+			{% endfor %}
+			}, 
+
+			"ec-items": {			
+			{% for item in site.ss-items %}
+				'{{ item.slug }}': {
+					title: "{{ item.title }}",
+					img: "{{ item['image-url'] }}",
+					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
+				},
+			{% endfor %}
+			}, 
+		};
+
 		const select = new Howl({
 			src: ['./pyre_life_sentence.mp3'],
 			loop: true,
@@ -314,7 +336,14 @@
 		});
 
 		$('.slot').on('click', function(){
+			console.log($(this).data('char'));
+			console.log($(this).data('item'));
+			var item = items[$(this).data('char')][$(this).data('item')];
+
 			$('#dialog').addClass('active');
+			$('#dialog .inner-title').text(item.title);
+			$('#dialog .item-image').css('background-image', "url(" + item.img + ")");
+			$('#dialog .item-info').html(item.content);
 		})
 	
 		$('.gallery').magnificPopup({
