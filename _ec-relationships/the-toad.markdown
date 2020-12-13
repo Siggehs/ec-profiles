@@ -1,8 +1,8 @@
 ---
 title: The Toad
 date: 2020-12-13 16:35:00 Z
-Image URL: "/uploads/av.png"
-Relationship: Fiend
+image-url: "/uploads/av.png"
+relationship: Fiend
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut volutpat ex, et tempus sem. Praesent varius augue vel pharetra interdum.
