@@ -116,10 +116,9 @@
 			
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				{% for image in site.ss-images }
+					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+				{% endfor %}
 			</div>
 
 			<button class="collapsible inventorycollapse ff">inventory</button>
@@ -176,10 +175,9 @@
 			
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
-				<a class="imgslot" style="background-image: url(./ffxivbg.jpg)" href="./ffxivbg.jpg"></a>
+				{% for image in site.ec-images }
+					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+				{% endfor %}
 			</div>
 
 			<button class="collapsible inventorycollapse ff">inventory</button>
