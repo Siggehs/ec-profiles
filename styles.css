@@ -364,6 +364,27 @@ body {
     background: tan;
 }
 
+.content strong {
+    font-weight: 600;
+}
+
+.content em {
+    font-style: italic;
+}
+
+.content h1 {
+    font-size: 2em;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    
+}
+
+.content h3 {
+    font-size: 1.25em;    
+}
+
 .content:not(.inventory):not(.gallery) > * {
     margin: 10px 0;
 }
