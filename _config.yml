@@ -19,7 +19,7 @@ collections:
     output: false
   ss-items:
     title: SS-Items
-    output: true
+    output: false
   ss-relationships:
     title: SS-Relationships
     output: true
