@@ -10,7 +10,7 @@ collections:
     output: true
   ec-relationships:
     title: EC-Relationships
-    output: true
+    output: false
   posts:
     title: Posts
     output: true
