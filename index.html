@@ -1,3 +1,7 @@
+---
+# this is an empty front matter
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,7 @@
 	<meta name="twitter:image" content="">
 
 	<title>
-		funny zone
+		{{ "HI" | downcase }}
 	</title>
   
   	<meta name="theme-color" content="#2e6b35"/>
@@ -33,17 +37,8 @@
 	<link href="./styles.css" rel="stylesheet"> 
 </head>
 
-<!-- {{ site.pages }}
-
-	{% for page in site.pages %}
-		---page!! {{ page.titles }}---
-		{{ page.content }} 
-		--=endpage---
-	{% endfor %}
-	
--->
-
 <body>    
+	<!-- {% for page in site.pages %} {{ page.title }} {% endfor %}-->
 	<div class="title">
 		<span class="title-top">You peer into the fates of a torn family...</span>
 		<span class="title-sub"></span>
