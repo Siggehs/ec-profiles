@@ -26,46 +26,39 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: ec-images
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ec-items
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ec-relationships
+  values:
+    relationship: 
+    image-url: 
+- scope:
+    path: ''
+    type: ss-images
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ss-items
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ss-relationships
+  values:
+    relationship: 
+    image-url: 
 description: the eccentric zone
 url: "."
 repository: crekulon/ec-profiles
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "ec-images"
-    values:
-      image-url:
-  -
-    scope:
-      path: ""
-      type: "ec-items"
-    values:
-      image-url:
-  -
-    scope:
-      path: ""
-      type: "ec-relationships"
-    values:
-      relationship:
-      image-url:
-  -
-    scope:
-      path: ""
-      type: "ss-images"
-    values:
-      image-url:
-  -
-    scope:
-      path: ""
-      type: "ss-items"
-    values:
-      image-url:
-  -
-    scope:
-      path: ""
-      type: "ss-relationships"
-    values:
-      relationship:
-      image-url:
