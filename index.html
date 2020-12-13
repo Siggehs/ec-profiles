@@ -104,7 +104,7 @@
 			
 			<button class="collapsible ff">Relationships</button>
 			<div class="content relations">
-				{% for relation in site.ec-relationships %}
+				{% for relation in site.ss-relationships %}
 					<div class="relation ff">
 						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
 						<span class="relation-name inner-title">{{ relation.title }}</span>
@@ -162,19 +162,14 @@
 			
 			<button class="collapsible ff">Relationships</button>
 			<div class="content relations">
-				<div class="relation ff">
-					<div class="relation-av ff"><img src="./av.png"></div>
-					<span class="relation-name inner-title">Toadakulus Xarganathotron</span>
-					<span class="relation-type">Fiend</span>
-					<span class="relation-summary">This thing is fucking crazy. It will not stop until all other eccentrics are dead and burned to ash. </span>
-				</div>
-
-				<div class="relation ff">
-					<div class="relation-av ff"><img src="./av.png"></div>
-					<span class="relation-name inner-title">the ghoul</span>
-					<span class="relation-type">Ally</span>
-					<span class="relation-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut volutpat ex, et tempus sem. Praesent varius augue vel pharetra interdum.<br><br>Mauris commodo ac diam sed bibendum. Cras euismod blandit eros vitae tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam est ut neque lacinia dignissim. Donec lacinia dictum rhoncus. </span>
-				</div>
+				{% for relation in site.ec-relationships %}
+					<div class="relation ff">
+						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
+						<span class="relation-name inner-title">{{ relation.title }}</span>
+						<span class="relation-type">{{ relation['relationship'] }}</span>
+						<span class="relation-summary">{{ relation.content | markdownify }}</span>
+					</div>
+				{% endfor %}
 			</div>
 			
 			<button class="collapsible ff">Images</button>
