@@ -7,7 +7,7 @@ collections:
     output: true
   ec-items:
     title: EC-Items
-    output: true
+    output: false
   ec-relationships:
     title: EC-Relationships
     output: false
