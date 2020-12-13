@@ -116,7 +116,7 @@
 			
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
-				{% for image in site.ss-images }
+				{% for image in site.ss-images %}
 					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
 				{% endfor %}
 			</div>
@@ -175,7 +175,7 @@
 			
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
-				{% for image in site.ec-images }
+				{% for image in site.ec-images %}
 					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
 				{% endfor %}
 			</div>
