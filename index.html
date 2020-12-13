@@ -36,8 +36,7 @@
 	<link href="./styles.css" rel="stylesheet"> 
 </head>
 
-<body>    
-	<!-- {% for page in site.pages %} {{ page.title }} {% endfor %}-->
+<body>
 	<div class="title">
 		<span class="title-top">You peer into the fates of a torn family...</span>
 		<span class="title-sub"></span>
@@ -86,38 +85,21 @@
 
 	<section id="char1-info" class="char-area ff">
 		<div class="scroller">
-			<h1 class="inner-title"><span class="title-top">Eccentric Savant</span></h1>
+			<h1 class="inner-title"><span class="title-top">Skittish Scholar</span></h1>
 			
 			<button class="collapsible ff">Summary</button>
 			<div class="content">
-				<p>i am content!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
-				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+				{% assign e = site.pages | where: "title", "SS-Summary" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">OOC</button>
 			<div class="content">
-				<p>cool cool cool freakin lipsom zone over here</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<ul>
-					<li>bullet point</li>
-					<li>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. </li>
-					<li>Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </li>
-				</ul>
+				{% assign e = site.pages | where: "title", "SS-OOC" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
 			<div class="content">
-				<p>i am content!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
-				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
-
-				<div class="arc">
-					<span class="arc-name"></span>
-
-				</div>
+				{% assign e = site.pages | where: "title", "SS-Meta" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
@@ -165,39 +147,39 @@
 	
 	<section id="char2-info" class="char-area ff">
 		<div class="scroller">
-			<h1 class="inner-title"><span class="title-top">Skittish Scholar</span></h1>
+			
+			<h1 class="inner-title"><span class="title-top">Eccentric Savant</span></h1>
 			
 			<button class="collapsible ff">Summary</button>
 			<div class="content">
-				<p>i am content!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
-				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+				{% assign e = site.pages | where: "title", "EC-Summary" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">OOC</button>
 			<div class="content">
-				<p>cool cool cool freakin lipsom zone over here</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<ul>
-					<li>bullet point</li>
-					<li>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. </li>
-					<li>Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </li>
-				</ul>
+				{% assign e = site.pages | where: "title", "EC-OOC" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
 			<div class="content">
-				<p>i am content!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
+				{% assign e = site.pages | where: "title", "EC-Meta" | first %} {{ e.content | markdownify }}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
-			<div class="content">
-				<p>i am content!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. </p>
-				<p>Etiam turpis nibh, auctor a lectus ut, pretium lobortis turpis. Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. </p>
-				<p>Quisque porta nunc nulla, facilisis placerat diam pharetra a.</p>
+			<div class="content relations">
+				<div class="relation ff">
+					<div class="relation-av ff"><img src="./av.png"></div>
+					<span class="relation-name inner-title">Toadakulus Xarganathotron</span>
+					<span class="relation-type">Fiend</span>
+					<span class="relation-summary">This thing is fucking crazy. It will not stop until all other eccentrics are dead and burned to ash. </span>
+				</div>
+
+				<div class="relation ff">
+					<div class="relation-av ff"><img src="./av.png"></div>
+					<span class="relation-name inner-title">the ghoul</span>
+					<span class="relation-type">Ally</span>
+					<span class="relation-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut volutpat ex, et tempus sem. Praesent varius augue vel pharetra interdum.<br><br>Mauris commodo ac diam sed bibendum. Cras euismod blandit eros vitae tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam est ut neque lacinia dignissim. Donec lacinia dictum rhoncus. </span>
+				</div>
 			</div>
 			
 			<button class="collapsible ff">Images</button>
