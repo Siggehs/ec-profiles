@@ -126,7 +126,7 @@
 			<div class="inventory content">
 				{% for item in site.ss-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item.['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ss-items" data-item="{{ item.slug }}"></div>
@@ -186,7 +186,7 @@
 			<div class="inventory content">
 				{% for item in site.ec-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item.['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ec-items" data-item="{{ item.slug }}"></div>
