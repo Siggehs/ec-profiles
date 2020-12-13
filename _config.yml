@@ -2,6 +2,9 @@
 title: Eccentric Test
 timezone: UTC
 collections:
+  ec-relationships:
+    title: EC-Relationships
+    output: true
   posts:
     title: Posts
     output: true
