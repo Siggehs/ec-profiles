@@ -16,7 +16,7 @@ collections:
     output: true
   ss-images:
     title: SS-Images
-    output: true
+    output: false
   ss-items:
     title: SS-Items
     output: true
