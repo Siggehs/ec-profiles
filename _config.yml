@@ -11,6 +11,9 @@ collections:
   posts:
     title: Posts
     output: true
+  ss-items:
+    title: SS-Items
+    output: true
   ss-relationships:
     title: SS-Relationships
     output: true
