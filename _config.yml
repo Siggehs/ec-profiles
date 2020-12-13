@@ -22,7 +22,7 @@ collections:
     output: false
   ss-relationships:
     title: SS-Relationships
-    output: true
+    output: false
   uploads:
     title: Uploads
     output: true
