@@ -5,32 +5,24 @@ collections:
   ec-images:
     title: EC-Images
     output: false
-    image-url: 
   ec-items:
     title: EC-Items
     output: false
-    image-url: 
   ec-relationships:
     title: EC-Relationships
     output: false
-    image-url: 
-    relationship:
   posts:
     title: Posts
     output: true
   ss-images:
     title: SS-Images
     output: false
-    image-url: 
   ss-items:
     title: SS-Items
     output: false
-    image-url: 
   ss-relationships:
     title: SS-Relationships
     output: false
-    image-url: 
-    relationship:
   uploads:
     title: Uploads
     output: true
