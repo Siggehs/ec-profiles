@@ -8,6 +8,9 @@ collections:
   posts:
     title: Posts
     output: true
+  ss-relationships:
+    title: SS-Relationships
+    output: true
   uploads:
     title: Uploads
     output: true
