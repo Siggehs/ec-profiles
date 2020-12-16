@@ -4,12 +4,10 @@ date: 2020-12-12 23:46:00 Z
 position: 3
 ---
 
-# i am big text!
-## somewhat bigger
-### slightly biggy
+# Do you ever dream about...
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. 
+##                                  ... just how different things could be?
 
-*Etiam turpis nibh*, **auctor a lectus ut, pretium lobortis turpis.** Sed euismod metus et mollis rhoncus. Quisque et purus vehicula, accumsan turpis nec, varius nibh. Nulla egestas ipsum nec eleifend varius. Praesent laoreet, metus in luctus varius, purus justo hendrerit massa, vitae egestas augue mauris et tellus. Nam rutrum tempus tortor a malesuada. Curabitur enim nisl, finibus quis augue commodo, lacinia posuere ante. Maecenas sollicitudin sed dolor vitae tincidunt. 
+The Skittish Scholar is a naive idealist with goals bigger than her brain; a heartfelt drive that would see her overcome any obstacle or challenge... if only her nerves would let her. 
 
-Quisque porta nunc nulla, facilisis placerat diam pharetra a.
+Wracked with fierce anxieties borne of living in a (literal) bubble for twenty-four cycles with no contact with the outside world, she seeks to make amends for this lost time by scouring the land for its wonders -- and the people in it.
