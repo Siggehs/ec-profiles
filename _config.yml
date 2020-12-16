@@ -1,0 +1,64 @@
+---
+title: Eccentric Devzone
+timezone: UTC
+collections:
+  ec-images:
+    title: EC-Images
+    output: false
+  ec-items:
+    title: EC-Items
+    output: false
+  ec-relationships:
+    title: EC-Relationships
+    output: false
+  posts:
+    title: Posts
+    output: true
+  ss-images:
+    title: SS-Images
+    output: false
+  ss-items:
+    title: SS-Items
+    output: false
+  ss-relationships:
+    title: SS-Relationships
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: ec-images
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ec-items
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ec-relationships
+  values:
+    relationship: 
+    image-url: 
+- scope:
+    path: ''
+    type: ss-images
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ss-items
+  values:
+    image-url: 
+- scope:
+    path: ''
+    type: ss-relationships
+  values:
+    relationship: 
+    image-url: 
+description: the eccentric zone
+url: "."
+repository: crekulon/ec-profiles
