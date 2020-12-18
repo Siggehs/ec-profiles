@@ -17,6 +17,9 @@ collections:
   posts:
     title: Posts
     output: true
+  ss-arcs:
+    title: SS-Arcs
+    output: true
   ss-images:
     title: SS-Images
     output: false
