@@ -2,6 +2,9 @@
 title: Eccentric Devzone
 timezone: UTC
 collections:
+  ec-arcs:
+    title: EC-Arcs
+    output: true
   ec-images:
     title: EC-Images
     output: false
