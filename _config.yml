@@ -81,7 +81,7 @@ defaults:
   values:
     relationship: 
     primary-image: 
-description: the eccentric zone
+description: 
 url: "."
 repository: crekulon/ec-profiles
 EC-Subtitle: da centric
