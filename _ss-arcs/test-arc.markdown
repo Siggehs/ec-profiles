@@ -2,7 +2,7 @@
 title: Test Arc
 date: 2020-12-19 00:10:00 Z
 primary-image: "/uploads/cityofheroes_hPSbTxrWJv.jpg"
-background-image: "/uploads/cityofheroes_hPSbTxrWJv.jpg"
+background-image: "/uploads/cityofheroes_IZm1ID3NzD.png"
 gradient-top-color: "#7f5151"
 ---
 
