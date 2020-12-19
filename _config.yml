@@ -35,36 +35,52 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: ec-arcs
+  values:
+    primary-image: 
+    background-image:
+    gradient-top-color: #000
+    gradient-bottom-color: #0000
+- scope:
+    path: ''
     type: ec-images
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ec-items
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ec-relationships
   values:
     relationship: 
-    image-url: 
+    primary-image: 
+- scope:
+    path: ''
+    type: ss-arcs
+  values:
+    primary-image: 
+    background-url:
+    gradient-top-color: #000
+    gradient-bottom-color: #0000
 - scope:
     path: ''
     type: ss-images
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ss-items
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ss-relationships
   values:
     relationship: 
-    image-url: 
+    primary-image: 
 description: the eccentric zone
 url: "."
 repository: crekulon/ec-profiles

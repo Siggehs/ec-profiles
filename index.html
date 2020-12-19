@@ -100,13 +100,22 @@
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
 			<div class="content">
 				{% assign e = site.pages | where: "title", "SS-Meta" | first %} {{ e.content | markdownify }}
+				{% for arc in site.ss-arcs %}
+				<style>
+					#arc-{{ arc.title | slugify }} {
+						background: url({{ arc[background-url] }}), linear-gradient(0deg, {{ arc['gradient-top-color'] }}, {{arc['gradient-bottom-color']}} );
+					}
+				</style>
+				<div class="arc collapsible" id="arc-{{ arc.title | slugify }}">{{ arc.title }}</div>
+				<div class="arctext"></div>
+				{% endfor %}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
 			<div class="content relations">
 				{% for relation in site.ss-relationships %}
 					<div class="relation ff">
-						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
+						<div class="relation-av ff"><img src="{{ relation['primary-image'] }}"></div>
 						<span class="relation-name inner-title">{{ relation.title }}</span>
 						<span class="relation-type">{{ relation['relationship'] }}</span>
 						<span class="relation-summary">{{ relation.content | markdownify }}</span>
@@ -117,15 +126,15 @@
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
 				{% for image in site.ss-images %}
-					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+					<a class="imgslot" style="background-image: url({{ image['primary-image'] }})" href="{{ image['primary-image'] }}"></a>
 				{% endfor %}
 			</div>
 
-			<button class="collapsible inventorycollapse ff">inventory</button>
+			<button class="collapsible inventorycollapse ff">Inventory</button>
 			<div class="inventory content">
 				{% for item in site.ss-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['primary-image'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ss-items" data-item="{{ item.slug }}"></div>
@@ -165,7 +174,7 @@
 			<div class="content relations">
 				{% for relation in site.ec-relationships %}
 					<div class="relation ff">
-						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
+						<div class="relation-av ff"><img src="{{ relation['primary-image'] }}"></div>
 						<span class="relation-name inner-title">{{ relation.title }}</span>
 						<span class="relation-type">{{ relation['relationship'] }}</span>
 						<span class="relation-summary">{{ relation.content | markdownify }}</span>
@@ -176,15 +185,15 @@
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
 				{% for image in site.ec-images %}
-					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+					<a class="imgslot" style="background-image: url({{ image['primary-image'] }})" href="{{ image['primary-image'] }}"></a>
 				{% endfor %}
 			</div>
 
-			<button class="collapsible inventorycollapse ff">inventory</button>
+			<button class="collapsible inventorycollapse ff">Inventory</button>
 			<div class="inventory content">
 				{% for item in site.ec-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['primary-image'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ec-items" data-item="{{ item.slug }}"></div>
@@ -223,7 +232,7 @@
 			{% for item in site.ss-items %}
 				'{{ item.slug }}': {
 					title: "{{ item.title }}",
-					img: "{{ item['image-url'] }}",
+					img: "{{ item['primary-image'] }}",
 					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
 				},
 			{% endfor %}
@@ -233,7 +242,7 @@
 			{% for item in site.ec-items %}
 				'{{ item.slug }}': {
 					title: "{{ item.title }}",
-					img: "{{ item['image-url'] }}",
+					img: "{{ item['primary-image'] }}",
 					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
 				},
 			{% endfor %}
