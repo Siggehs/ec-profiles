@@ -38,9 +38,9 @@ defaults:
     type: ec-arcs
   values:
     primary-image: 
-    background-image:
-    gradient-top-color: #000
-    gradient-bottom-color: #0000
+    background-image: 
+    gradient-top-color: 
+    gradient-bottom-color: 
 - scope:
     path: ''
     type: ec-images
@@ -62,9 +62,9 @@ defaults:
     type: ss-arcs
   values:
     primary-image: 
-    background-url:
-    gradient-top-color: #000
-    gradient-bottom-color: #0000
+    background-url: 
+    gradient-top-color: 
+    gradient-bottom-color: 
 - scope:
     path: ''
     type: ss-images
