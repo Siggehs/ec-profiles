@@ -1,7 +1,7 @@
 ---
 title: The Toad
 date: 2020-12-13 16:54:00 Z
-image-url: "/uploads/av.png"
+primary-image: "/uploads/av.png"
 relationship: Foe
 ---
 

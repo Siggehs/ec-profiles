@@ -1,7 +1,7 @@
 ---
 title: The Cog
 date: 2020-12-13 17:46:00 Z
-image-url: "/gear.gif"
+primary-image: "/gear.gif"
 ---
 
 *it spins it spins it spins it spins*

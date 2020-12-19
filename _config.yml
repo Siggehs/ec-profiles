@@ -2,6 +2,9 @@
 title: Eccentric Devzone
 timezone: UTC
 collections:
+  ec-arcs:
+    title: EC-Arcs
+    output: true
   ec-images:
     title: EC-Images
     output: false
@@ -13,6 +16,9 @@ collections:
     output: false
   posts:
     title: Posts
+    output: true
+  ss-arcs:
+    title: SS-Arcs
     output: true
   ss-images:
     title: SS-Images
@@ -29,36 +35,54 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: ec-arcs
+  values:
+    primary-image: 
+    background-image: 
+    gradient-top-color: 
+    gradient-bottom-color: 
+- scope:
+    path: ''
     type: ec-images
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ec-items
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ec-relationships
   values:
     relationship: 
-    image-url: 
+    primary-image: 
+- scope:
+    path: ''
+    type: ss-arcs
+  values:
+    primary-image: 
+    background-image: 
+    gradient-top-color: 
+    gradient-bottom-color: 
 - scope:
     path: ''
     type: ss-images
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ss-items
   values:
-    image-url: 
+    primary-image: 
 - scope:
     path: ''
     type: ss-relationships
   values:
     relationship: 
-    image-url: 
-description: the eccentric zone
+    primary-image: 
+description: 
 url: "."
 repository: crekulon/ec-profiles
+EC-Subtitle: da centric
+SS-Subtitle: de fishe

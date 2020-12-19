@@ -7,13 +7,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="">
+	<meta name="twitter:title" content="mystic.lol">
 	<meta name="twitter:description" content="">
-	<meta property="og:image" content="">
-	<meta name="twitter:image" content="">
+	<meta property="og:image" content="https://www.mystic.lol/soc.png">
+	<meta name="twitter:image" content="https://www.mystic.lol/soc.png">
 
 	<title>
-		{{ "HI" | downcase }}
+		mystic.lol
 	</title>
   
   	<meta name="theme-color" content="#2e6b35"/>
@@ -59,7 +59,7 @@
 				<div class="title-overlay" data-depth="0.5">
 					<div class="inner-title">
 						<span class="title-top">The Skittish Scholar</span>
-						<span class="title-sub">A freakin fish</span>
+						<span class="title-sub">{{ site['SS-Subtitle'] }}</span>
 					</div>
 				</div>
 				<div class="imgwrapper" data-depth="0.1"><img src="./fishy1.png"></div>
@@ -72,7 +72,7 @@
 				<div class="title-overlay" data-depth="0.5">
 					<div class="inner-title">
 						<span class="title-top">The Eccentric Savant</span>
-						<span class="title-sub" >Haunted by toads</span>
+						<span class="title-sub" >{{ site['EC-Subtitle'] }}</span>
 					</div>
 				</div>
 				<div class="imgwrapper" data-depth="0.1"><img src="./cat1.png"></div>
@@ -98,15 +98,32 @@
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
-			<div class="content">
+			<div class="content meta">
 				{% assign e = site.pages | where: "title", "SS-Meta" | first %} {{ e.content | markdownify }}
+				{% for arc in site.ss-arcs %}
+				<style>
+					#arc-{{ arc.title | slugify }} {
+						background: linear-gradient(180deg, 
+						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						url({{ arc['background-image'] }});
+						background-size: cover;
+						background-position: center;
+					}
+				</style>
+				<div class="arc collapsible" id="arc-{{ arc.title | slugify }}">{{ arc.title }}</div>
+				<div class="arctext content">
+					<div class="arc-av ff"><img src="{{ arc['primary-image'] }}"></div>
+					{{ arc.content | markdownify }}
+				</div>
+				{% endfor %}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
 			<div class="content relations">
 				{% for relation in site.ss-relationships %}
 					<div class="relation ff">
-						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
+						<div class="relation-av ff"><img src="{{ relation['primary-image'] }}"></div>
 						<span class="relation-name inner-title">{{ relation.title }}</span>
 						<span class="relation-type">{{ relation['relationship'] }}</span>
 						<span class="relation-summary">{{ relation.content | markdownify }}</span>
@@ -117,15 +134,15 @@
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
 				{% for image in site.ss-images %}
-					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+					<a class="imgslot" style="background-image: url({{ image['primary-image'] }})" href="{{ image['primary-image'] }}"></a>
 				{% endfor %}
 			</div>
 
-			<button class="collapsible inventorycollapse ff">inventory</button>
+			<button class="collapsible inventorycollapse ff">Inventory</button>
 			<div class="inventory content">
 				{% for item in site.ss-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['primary-image'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ss-items" data-item="{{ item.slug }}"></div>
@@ -157,15 +174,32 @@
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
-			<div class="content">
+			<div class="content meta">
 				{% assign e = site.pages | where: "title", "EC-Meta" | first %} {{ e.content | markdownify }}
+				{% for arc in site.EC-arcs %}
+				<style>
+					#arc-{{ arc.title | slugify }} {
+						background: linear-gradient(180deg, 
+						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						url({{ arc['background-image'] }});
+						background-size: cover;
+						background-position: center;
+					}
+				</style>
+				<div class="arc collapsible" id="arc-{{ arc.title | slugify }}">{{ arc.title }}</div>
+				<div class="arctext content">
+					<div class="arc-av ff"><img src="{{ arc['primary-image'] }}"></div>
+					{{ arc.content | markdownify }}
+				</div>
+				{% endfor %}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
 			<div class="content relations">
 				{% for relation in site.ec-relationships %}
 					<div class="relation ff">
-						<div class="relation-av ff"><img src="{{ relation['image-url'] }}"></div>
+						<div class="relation-av ff"><img src="{{ relation['primary-image'] }}"></div>
 						<span class="relation-name inner-title">{{ relation.title }}</span>
 						<span class="relation-type">{{ relation['relationship'] }}</span>
 						<span class="relation-summary">{{ relation.content | markdownify }}</span>
@@ -176,15 +210,15 @@
 			<button class="collapsible ff">Images</button>
 			<div class="content gallery">
 				{% for image in site.ec-images %}
-					<a class="imgslot" style="background-image: url({{ image['image-url'] }})" href="{{ image['image-url'] }}"></a>
+					<a class="imgslot" style="background-image: url({{ image['primary-image'] }})" href="{{ image['primary-image'] }}"></a>
 				{% endfor %}
 			</div>
 
-			<button class="collapsible inventorycollapse ff">inventory</button>
+			<button class="collapsible inventorycollapse ff">Inventory</button>
 			<div class="inventory content">
 				{% for item in site.ec-items %}
 					<style> 
-						.slot.item-{{ item.slug }} { background-image: url({{ item['image-url'] }}); }
+						.slot.item-{{ item.slug }} { background-image: url({{ item['primary-image'] }}); }
 						.slot.item-{{ item.slug }}:after { content: "{{ item.title }}"; }
 					</style>
 					<div class="slot item-{{ item.slug }} filled" data-char="ec-items" data-item="{{ item.slug }}"></div>
@@ -223,7 +257,7 @@
 			{% for item in site.ss-items %}
 				'{{ item.slug }}': {
 					title: "{{ item.title }}",
-					img: "{{ item['image-url'] }}",
+					img: "{{ item['primary-image'] }}",
 					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
 				},
 			{% endfor %}
@@ -233,7 +267,7 @@
 			{% for item in site.ec-items %}
 				'{{ item.slug }}': {
 					title: "{{ item.title }}",
-					img: "{{ item['image-url'] }}",
+					img: "{{ item['primary-image'] }}",
 					content: "{{ item.content | markdownify | replace: '"', '""' | strip_newlines }}"
 				},
 			{% endfor %}
@@ -321,7 +355,7 @@
 		$('#char1, #char2').on('click', function(){
 			let id = $(this).attr('id');
 			$('body').attr('id', (id + "-selected"));
-			$("#" + id + "-info .collapsible:first-of-type").click();
+			$("#" + id + "-info .scroller > .collapsible:first-of-type").click();
 		});
 
 		$('#return').on('click', function(){
@@ -358,6 +392,11 @@
 					this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
 				}
 			}
+		});
+
+		$('.arc.collapsible').on('click', function(){
+			let x = $(this).parent();
+			x.css('max-height', x.parent()[0].scrollHeight + "px");
 		});
 
 		$('#volume-slider').on('change', function(){

@@ -2,7 +2,7 @@
 title: Anhe Dulain
 date: 2020-12-13 20:31:00 Z
 relationship: Uncertain
-image-url: "/uploads/anhecon.png"
+primary-image: "/uploads/anhecon.png"
 ---
 
 Uncertainty wrapped up in one poorly kept secret.  
