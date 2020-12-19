@@ -62,7 +62,7 @@ defaults:
     type: ss-arcs
   values:
     primary-image: 
-    background-url: 
+    background-image: 
     gradient-top-color: 
     gradient-bottom-color: 
 - scope:

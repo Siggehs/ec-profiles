@@ -98,16 +98,24 @@
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
-			<div class="content">
+			<div class="content meta">
 				{% assign e = site.pages | where: "title", "SS-Meta" | first %} {{ e.content | markdownify }}
 				{% for arc in site.ss-arcs %}
 				<style>
 					#arc-{{ arc.title | slugify }} {
-						background: url({{ arc[background-url] }}), linear-gradient(0deg, {{ arc['gradient-top-color'] }}, {{arc['gradient-bottom-color']}} );
+						background: linear-gradient(180deg, 
+						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						url({{ arc['background-image'] }});
+						background-size: cover;
+						background-position: center;
 					}
 				</style>
 				<div class="arc collapsible" id="arc-{{ arc.title | slugify }}">{{ arc.title }}</div>
-				<div class="arctext"></div>
+				<div class="arctext content">
+					<div class="arc-av ff"><img src="{{ arc['primary-image'] }}"></div>
+					{{ arc.content | markdownify }}
+				</div>
 				{% endfor %}
 			</div>
 			
@@ -166,8 +174,25 @@
 			</div>
 			
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
-			<div class="content">
+			<div class="content meta">
 				{% assign e = site.pages | where: "title", "EC-Meta" | first %} {{ e.content | markdownify }}
+				{% for arc in site.EC-arcs %}
+				<style>
+					#arc-{{ arc.title | slugify }} {
+						background: linear-gradient(180deg, 
+						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						url({{ arc['background-image'] }});
+						background-size: cover;
+						background-position: center;
+					}
+				</style>
+				<div class="arc collapsible" id="arc-{{ arc.title | slugify }}">{{ arc.title }}</div>
+				<div class="arctext content">
+					<div class="arc-av ff"><img src="{{ arc['primary-image'] }}"></div>
+					{{ arc.content | markdownify }}
+				</div>
+				{% endfor %}
 			</div>
 			
 			<button class="collapsible ff">Relationships</button>
@@ -330,7 +355,7 @@
 		$('#char1, #char2').on('click', function(){
 			let id = $(this).attr('id');
 			$('body').attr('id', (id + "-selected"));
-			$("#" + id + "-info .collapsible:first-of-type").click();
+			$("#" + id + "-info .scroller > .collapsible:first-of-type").click();
 		});
 
 		$('#return').on('click', function(){
@@ -367,6 +392,11 @@
 					this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
 				}
 			}
+		});
+
+		$('.arc.collapsible').on('click', function(){
+			let x = $(this).parent();
+			x.css('max-height', x.parent()[0].scrollHeight + "px");
 		});
 
 		$('#volume-slider').on('change', function(){
