@@ -176,7 +176,7 @@
 			<button class="collapsible ff">Meta Info &amp; Arcs</button>
 			<div class="content meta">
 				{% assign e = site.pages | where: "title", "EC-Meta" | first %} {{ e.content | markdownify }}
-				{% for arc in site.EC-arcs %}
+				{% for arc in site.ec-arcs %}
 				<style>
 					#arc-{{ arc.title | slugify }} {
 						background: linear-gradient(180deg, 
