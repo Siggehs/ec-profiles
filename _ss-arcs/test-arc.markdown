@@ -1,11 +1,8 @@
 ---
-title: Test Arc
+title: Long Walk Ahead
 date: 2020-12-19 00:10:00 Z
-primary-image: "/uploads/cityofheroes_IZm1ID3NzD.png"
-background-image: "/uploads/cityofheroes_hPSbTxrWJv.jpg"
-gradient-top-color: "#321313"
+background-image: "/uploads/0c038436896702b8fb949ae5b0d777fb.png"
+gradient-top-color: "#464343"
 ---
 
-i am content!
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, molestie ut quam at, dapibus consequat mauris. Mauris bibendum diam at sollicitudin elementum. Quisque molestie velit at ante varius bibendum. Nunc eu odio felis. 
+Freed from an open cage, the Skittish Scholar makes her way across Eorzea seeking new contacts, adventures - and development.
