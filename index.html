@@ -105,7 +105,7 @@
 					#arc-{{ arc.title | slugify }} {
 						background: linear-gradient(180deg, 
 						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
-						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-bottom-color'] }} {% else %} #0000 {% endif %}),
 						url({{ arc['background-image'] }});
 						background-size: cover;
 						background-position: center;
@@ -181,7 +181,7 @@
 					#arc-{{ arc.title | slugify }} {
 						background: linear-gradient(180deg, 
 						{% if arc['gradient-top-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}, 
-						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-top-color'] }} {% else %} #0000 {% endif %}),
+						{% if arc['gradient-bottom-color'] %} {{ arc['gradient-bottom-color'] }} {% else %} #0000 {% endif %}),
 						url({{ arc['background-image'] }});
 						background-size: cover;
 						background-position: center;
