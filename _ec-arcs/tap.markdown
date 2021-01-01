@@ -2,6 +2,7 @@
 title: T'orzea
 date: 2020-12-20 09:42:00 Z
 background-image: "/uploads/5b0f2bff39f2ba86c2513c755622b557.png"
+gradient-top-color: "#000000"
 ---
 
 I'm looking for excitement. I'm looking for something new; something fresh, fun. I met a man, the other day -- I'll call him 'Ray'. He and his friends taught me about Thanalan; and I didn't know it, but I'd be staying there for a large chunk of my life. No more was I learning to stepdance, to be a proper lady -- instead, I found solace in the teachings my family scorned so: Magic. Thaumaturgy came first - and after that, conjury. I didn't like it very well - so I moved right on to arcanima. Then... I experimented.
