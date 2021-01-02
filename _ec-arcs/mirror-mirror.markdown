@@ -1,8 +1,8 @@
 ---
 title: Mirror, Mirror
 date: 2021-01-02 03:25:00 Z
+background-image: "/uploads/4534464bdce1672b17485eb25d7fc0bf.png"
 gradient-top-color: "#000000"
-gradient-bottom-color: "#000000"
 ---
 
 A fortress made of black and white.  A building - hollow - transparent from the outside, yet solid from the inside. A paradox.

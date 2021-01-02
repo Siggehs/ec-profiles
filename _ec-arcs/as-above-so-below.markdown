@@ -1,8 +1,8 @@
 ---
 title: As Above, So Below
 date: 2021-01-02 03:12:00 Z
+background-image: "/uploads/6db9baf08b994402cf6c6ab100eadc99.png"
 gradient-top-color: "#000000"
-gradient-bottom-color: "#000000"
 ---
 
 Strand yourself 'mongst the ocean.

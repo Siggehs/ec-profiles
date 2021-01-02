@@ -1,6 +1,8 @@
 ---
 title: Sever
 date: 2021-01-02 03:20:00 Z
+background-image: "/uploads/2e4f74981c51bc113a5b1d82847730d2.png"
+gradient-top-color: "#000000"
 ---
 
 Even devils speak truth, now and again. Even they can crack the mask of self-anonymity; the veil of which shrouds even the soul. 

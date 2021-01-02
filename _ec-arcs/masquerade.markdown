@@ -1,8 +1,8 @@
 ---
 title: Masquerade
 date: 2021-01-01 06:36:00 Z
+background-image: "/uploads/897ba79e6bce4fc4d1f2eefb70d6a1e9.png"
 gradient-top-color: "#000000"
-gradient-bottom-color: "#000000"
 ---
 
 "The Kastner". 
