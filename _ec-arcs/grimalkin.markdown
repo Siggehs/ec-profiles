@@ -1,7 +1,7 @@
 ---
 title: Grimalkin
 date: 2021-01-01 03:44:00 Z
-primary-image: "/uploads/36b1dfb8b913f3455eb8420b7830692b.png"
+background-image: "/uploads/36b1dfb8b913f3455eb8420b7830692b-a5a385.png"
 gradient-top-color: "#000000"
 ---
 
