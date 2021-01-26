@@ -1,7 +1,7 @@
 ---
-title: yeet
+title: A Passionate Heart
 date: 2020-12-13 20:30:00 Z
-primary-image: "/uploads/5ee7a96185a44b79aeb34a2c3d42acf2.png"
+primary-image: "/uploads/Passionate%20Heart.png"
 ---
 
-screet
+*Sometimes all you need is a little push from someone important.*
