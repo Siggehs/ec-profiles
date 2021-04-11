@@ -329,7 +329,7 @@ li {
     transform: translateX(-100%);
 }
 
-.char-area h1.inner-title {
+.char-area h1.inner-title, #charter h1.inner-title {
     color: #bbaf8e;
     text-shadow: 0px -1px 0px #e9e6b9, 0px 0px 0px #8a7c57, 0px 1px 0px #645436;
     font-size: calc(1em + 1vw);
@@ -477,6 +477,7 @@ li {
     transition: opacity 1s ease-in-out;
     color: white;
     font-style: italic;
+    text-align: center;
 }
 
 .slot:hover:after {
@@ -531,6 +532,8 @@ li {
 .relation-av img, .arc-av img {
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
 .relation-type {
@@ -692,7 +695,7 @@ body[id*="selected"] #return {
     left: 0;
     margin: auto;
     z-index: 10;
-    width: 288px;
+    width: 255px;
     color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -702,6 +705,15 @@ body[id*="selected"] #return {
     align-items: center;
     border-top-left-radius: 0;
     padding: 5px;
+    transition: opacity 400ms ease-in-out;
+}
+
+.charter-open #volume {
+    opacity: 0.3;
+}
+
+.charter-open #volume:hover {
+    opacity: 1;
 }
 
 #volume > div {
@@ -883,4 +895,169 @@ opacity: 0;
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
     cursor: initial;
+}
+
+
+/* CHARTER UPDATE */
+#charter-trigger {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    min-width: 25%;
+    min-height: 8vh;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    background: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #95907c;
+    text-shadow: 0px -1px 0px #f7f7f7, 0px 0px 0px #959595, 0px 1px 0px #4a4a4a;
+    font-size: calc(1em + 1vw);
+}
+
+#charter-trigger::after, #charter-trigger::before {
+    border-bottom: 0;
+    background: 0;
+}
+  
+#charter-trigger::before {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(243,242,195,1) 30%, rgba(228,188,107,1) 100%);
+}
+
+#charter, #charter-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    max-width: 1400px;
+    background: black;
+    display: flex;
+    align-items: flex-start;
+    z-index: 9;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;  
+    transition: all 1.5s ease-in-out;
+    transform: translateY(100%);
+}
+
+#charter-overlay {
+    z-index: 8;
+    height: 100%;
+    max-width: unset;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0);
+}
+
+.charter-open #charter {
+    transform: translateY(0);
+}
+
+.charter-open #charter-overlay {
+    opacity: 0.8;
+    pointer-events: initial;
+}
+
+#charter-info {
+    flex-basis: 66%;
+    margin-right: 10px;
+    padding: 0;
+}
+
+#charter-info .ff {
+    padding: 0;
+}
+
+#charter-description {
+    overflow-y: auto;
+    max-height: 45.5vh;
+}
+
+#charter-description p {
+    color: white;
+    margin: 15px;
+    line-height: 1.15em;
+}
+
+#charter-characters {
+    flex-basis: 33%;
+    flex-grow: 1;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#charter h1.inner-title {
+    margin: 0.5em 10px;
+}
+
+#charter-characters > .relation:first-of-type {
+    margin-top: 0;
+}
+
+#charter-banner {
+    width: calc(100% - 2px);
+    height: 40vh;
+    background: green;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: auto;
+    border-bottom: 3px solid #8a7c57;
+}
+
+#charter-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,rgb(107, 101, 107) 0%, rgb(49, 48, 49) 10%, rgb(50, 49, 49) 82%, rgb(58, 58, 52) 92%, rgb(60, 60, 52) 100%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}   
+
+#charter .relation-type {
+    margin-bottom: 0;
+}
+
+.relation.join-link {
+    cursor: pointer;
+    display: block;
+    min-height: unset;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(180deg, rgb(62, 89, 112) 0%, rgb(45, 80, 64) 10%, rgb(37, 66, 66) 25%, rgb(43, 43, 24) 100%);
+}
+
+.relation.join-link .relation-name {
+    margin-top: 0;
+    line-height: 1.25em;
+}
+  
+/* form */
+#form {
+    overflow: hidden;
+    min-height: 0;
+    max-height: 4px;
+    transition: max-height 1s ease-in-out;
+}
+
+#form iframe {
+    width: 100% !important;
+}
+
+#form.open {
+    max-height: 830px
 }
