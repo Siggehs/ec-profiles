@@ -112,7 +112,7 @@ SS-SFX-Button-Hover-File: '/temp_pluk.mp3'
 SS-SFX-Button-Click-File: '/temp_bruh.mp3'
 SS-Music: '/severance.mp3'
 SS-Music-Credit: 'Joel Louviere / Sokkycakes - Severance'
-Is-Charter-Active: true
+Is-Charter-Active: false
 Charter-Trigger-Text: Charter
 Charter-Title: yea of froggening mind
 Charter-Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et sapien porttitor, facilisis augue non, hendrerit lectus. Morbi non turpis sit amet est aliquet efficitur. Etiam a malesuada purus. Cras et ullamcorper elit, eget finibus velit. Aenean consequat, magna ac aliquet tincidunt, quam sapien tempor lorem, eget scelerisque leo ante a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum molestie velit, in lobortis diam dapibus eu. Pellentesque egestas eu erat eu gravida.
