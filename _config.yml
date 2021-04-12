@@ -80,8 +80,8 @@ defaults:
     type: ss-items
   values:
     primary-image: 
-    sfx-hover-file: "/temp_pluk.mp3"
-    sfx-click-file: "/temp_bwomm.mp3"
+    sfx-hover-file: 
+    sfx-click-file: 
 - scope:
     path: ''
     type: ss-relationships
@@ -101,15 +101,15 @@ Is-SFX-Enabled: false
 EC-Subtitle: yea of burning heart
 EC-Music: "/martyrs_blood.mp3"
 EC-Music-Credit: Corey Vitalis - Martyrs Blood
-EC-SFX-Portrait-Hover-File: "/temp_pluk.mp3"
-EC-SFX-Portrait-Click-File: "/temp_vineboom.mp3"
-EC-SFX-Button-Hover-File: "/temp_pluk.mp3"
-EC-SFX-Button-Click-File: "/temp_bruh.mp3"
+EC-SFX-Portrait-Hover-File: 
+EC-SFX-Portrait-Click-File: 
+EC-SFX-Button-Hover-File: 
+EC-SFX-Button-Click-File: 
 SS-Subtitle: yea of churning mind
-SS-SFX-Portrait-Hover-File: "/temp_pluk.mp3"
-SS-SFX-Portrait-Click-File: "/temp_vineboom.mp3"
-SS-SFX-Button-Hover-File: "/temp_pluk.mp3"
-SS-SFX-Button-Click-File: "/temp_vineboom.mp3"
+SS-SFX-Portrait-Hover-File: 
+SS-SFX-Portrait-Click-File: 
+SS-SFX-Button-Hover-File: 
+SS-SFX-Button-Click-File: 
 SS-Music: "/severance.mp3"
 SS-Music-Credit: Joel Louviere / Sokkycakes - Severance
 Is-Charter-Active: false
@@ -121,7 +121,7 @@ Charter-Description: |-
 Charter-Banner: "/uploads/2020-12-20_02-07-41-126_Talim%20-%20Simplicity.png"
 Charter-Join-Embed: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv2roVSiXaLGEMskr_lxE2l9rlC9PevgH3tmB-aRIORl4UHg/viewform?embedded=true"
   width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-Charter-SFX-Hover-File: "/temp_bruh.mp3"
-Charter-SFX-Click-File: "/temp_vineboom.mp3"
+Charter-SFX-Hover-File: 
+Charter-SFX-Click-File: 
 Charter-Music: "/martyrs_blood.mp3"
 Charter-Music-Credit: Corey Vitalis - Martyrs Blood
