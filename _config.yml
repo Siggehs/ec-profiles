@@ -98,6 +98,8 @@ description:
 url: "."
 repository: crekulon/ec-profiles
 Is-SFX-Enabled: false
+Select-Music-File: "./pyre_life_sentence.mp3"
+Select-Music-Credit: Darren Korb - Life Sentence
 EC-Subtitle: yea of burning heart
 EC-Music-File: "/martyrs_blood.mp3"
 EC-Music-Credit: Corey Vitalis - Martyrs Blood

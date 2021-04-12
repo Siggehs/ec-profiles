@@ -314,11 +314,11 @@
 
 		//init music
 		const select = new Howl({
-			src: ['./pyre_life_sentence.mp3'],
+			src: ['{{ site["Select-Music-File"] }}'],
 			loop: true,
 			volume: 0
 		});
-		select.credit = "Darren Korb - Life Sentence"
+		select.credit = "{{ site['Select-Music-Credit'] }}"
 
 		const char1 = new Howl({
 			src: ['{{ site["SS-Music-File"] }}'],
