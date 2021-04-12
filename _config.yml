@@ -2,6 +2,9 @@
 title: Eccentric Devzone
 timezone: UTC
 collections:
+  charter-chars:
+    title: Charter-Characters
+    output: false
   ec-arcs:
     title: EC-Arcs
     output: true
@@ -32,9 +35,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-  charter-chars:
-    title: Charter-Characters
-    output: false
 defaults:
 - scope:
     path: ''
@@ -54,8 +54,8 @@ defaults:
     type: ec-items
   values:
     primary-image: 
-    sfx-hover-file: '/temp_pluk.mp3'
-    sfx-click-file: '/temp_bwomm.mp3'
+    sfx-hover-file: "/temp_pluk.mp3"
+    sfx-click-file: "/temp_bwomm.mp3"
 - scope:
     path: ''
     type: ec-relationships
@@ -80,8 +80,8 @@ defaults:
     type: ss-items
   values:
     primary-image: 
-    sfx-hover-file: '/temp_pluk.mp3'
-    sfx-click-file: '/temp_bwomm.mp3'
+    sfx-hover-file: "/temp_pluk.mp3"
+    sfx-click-file: "/temp_bwomm.mp3"
 - scope:
     path: ''
     type: ss-relationships
@@ -92,35 +92,36 @@ defaults:
     path: ''
     type: charter-chars
   values:
-    subtitle:
-    char-image:
+    subtitle: 
+    char-image: 
 description: 
 url: "."
 repository: crekulon/ec-profiles
 Is-SFX-Enabled: false
 EC-Subtitle: yea of burning heart
-EC-Music: '/martyrs_blood.mp3'
-EC-Music-Credit: 'Corey Vitalis - Martyrs Blood'
-EC-SFX-Portrait-Hover-File: '/temp_pluk.mp3'
-EC-SFX-Portrait-Click-File: '/temp_vineboom.mp3'
-EC-SFX-Button-Hover-File: '/temp_pluk.mp3'
-EC-SFX-Button-Click-File: '/temp_bruh.mp3'
+EC-Music: "/martyrs_blood.mp3"
+EC-Music-Credit: Corey Vitalis - Martyrs Blood
+EC-SFX-Portrait-Hover-File: "/temp_pluk.mp3"
+EC-SFX-Portrait-Click-File: "/temp_vineboom.mp3"
+EC-SFX-Button-Hover-File: "/temp_pluk.mp3"
+EC-SFX-Button-Click-File: "/temp_bruh.mp3"
 SS-Subtitle: yea of churning mind
-SS-SFX-Portrait-Hover-File: '/temp_pluk.mp3'
-SS-SFX-Portrait-Click-File: '/temp_vineboom.mp3'
-SS-SFX-Button-Hover-File: '/temp_pluk.mp3'
-SS-SFX-Button-Click-File: '/temp_vineboom.mp3'
-SS-Music: '/severance.mp3'
-SS-Music-Credit: 'Joel Louviere / Sokkycakes - Severance'
+SS-SFX-Portrait-Hover-File: "/temp_pluk.mp3"
+SS-SFX-Portrait-Click-File: "/temp_vineboom.mp3"
+SS-SFX-Button-Hover-File: "/temp_pluk.mp3"
+SS-SFX-Button-Click-File: "/temp_vineboom.mp3"
+SS-Music: "/severance.mp3"
+SS-Music-Credit: Joel Louviere / Sokkycakes - Severance
 Is-Charter-Active: false
 Charter-Trigger-Text: Da Charta
 Charter-Title: yea of froggening mind
-Charter-Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et sapien porttitor, facilisis augue non, hendrerit lectus. Morbi non turpis sit amet est aliquet efficitur. Etiam a malesuada purus. Cras et ullamcorper elit, eget finibus velit. Aenean consequat, magna ac aliquet tincidunt, quam sapien tempor lorem, eget scelerisque leo ante a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum molestie velit, in lobortis diam dapibus eu. Pellentesque egestas eu erat eu gravida.
-
-Nunc pulvinar nec odio eget ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae porttitor nibh. Vestibulum sed lacus rutrum, ornare mauris et, blandit erat. Morbi eleifend molestie eros, vel laoreet libero auctor sit amet. Duis sit amet laoreet turpis. Sed ut turpis porttitor, porta sapien sed, tempus eros. Integer rutrum laoreet lorem, a pulvinar arcu. Suspendisse sodales placerat dui non porta. Integer congue scelerisque nulla, at pellentesque ex consectetur sed. Vestibulum odio sapien, tincidunt ac commodo at, dictum laoreet sem. Nullam sit amet condimentum neque, sit amet porta nunc. Aenean dui nibh, consequat a lacus ac, blandit eleifend tellus. Duis efficitur, tortor eget bibendum pretium, diam libero molestie arcu, vitae volutpat mi dui eu urna. Donec placerat arcu at gravida imperdiet. Nunc dignissim rhoncus felis ut vulputate."
-Charter-Banner: /uploads/2020-12-20_02-07-41-126_Talim%20-%20Simplicity.png
-Charter-Join-Embed: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv2roVSiXaLGEMskr_lxE2l9rlC9PevgH3tmB-aRIORl4UHg/viewform?embedded=true" width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-Charter-SFX-Hover-File: '/temp_bruh.mp3'
-Charter-SFX-Click-File: '/temp_vineboom.mp3'
-Charter-Music: '/martyrs_blood.mp3'
-Charter-Music-Credit: 'Corey Vitalis - Martyrs Blood'
+Charter-Description: |-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et sapien porttitor, facilisis augue non, hendrerit lectus. Morbi non turpis sit amet est aliquet efficitur. Etiam a malesuada purus. Cras et ullamcorper elit, eget finibus velit. Aenean consequat, magna ac aliquet tincidunt, quam sapien tempor lorem, eget scelerisque leo ante a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum molestie velit, in lobortis diam dapibus eu. Pellentesque egestas eu erat eu gravida.
+  Nunc pulvinar nec odio eget ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae porttitor nibh. Vestibulum sed lacus rutrum, ornare mauris et, blandit erat. Morbi eleifend molestie eros, vel laoreet libero auctor sit amet. Duis sit amet laoreet turpis. Sed ut turpis porttitor, porta sapien sed, tempus eros. Integer rutrum laoreet lorem, a pulvinar arcu. Suspendisse sodales placerat dui non porta. Integer congue scelerisque nulla, at pellentesque ex consectetur sed. Vestibulum odio sapien, tincidunt ac commodo at, dictum laoreet sem. Nullam sit amet condimentum neque, sit amet porta nunc. Aenean dui nibh, consequat a lacus ac, blandit eleifend tellus. Duis efficitur, tortor eget bibendum pretium, diam libero molestie arcu, vitae volutpat mi dui eu urna. Donec placerat arcu at gravida imperdiet. Nunc dignissim rhoncus felis ut vulputate.
+Charter-Banner: "/uploads/2020-12-20_02-07-41-126_Talim%20-%20Simplicity.png"
+Charter-Join-Embed: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv2roVSiXaLGEMskr_lxE2l9rlC9PevgH3tmB-aRIORl4UHg/viewform?embedded=true"
+  width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+Charter-SFX-Hover-File: "/temp_bruh.mp3"
+Charter-SFX-Click-File: "/temp_vineboom.mp3"
+Charter-Music: "/martyrs_blood.mp3"
+Charter-Music-Credit: Corey Vitalis - Martyrs Blood
