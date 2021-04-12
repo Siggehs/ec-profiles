@@ -54,7 +54,7 @@
 	</section>
 
 	<section id="select">
-		<div id="char1" onclick="fadeTo(char1)">
+		<div id="char1" onclick="fadeTo(char1)" class="sfx-portrait">
 			<div class="scene" id="char1-scene">
 				<div class="title-overlay" data-depth="0.5">
 					<div class="inner-title">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div id="char2" onclick="fadeTo(char2)">
+		<div id="char2" onclick="fadeTo(char2)" class="sfx-portrait">
 			<div class="scene" id="char2-scene">
 				<div class="title-overlay" data-depth="0.5">
 					<div class="inner-title">
@@ -251,6 +251,44 @@
 		</div>
 	</div>
 
+	{% if site['Is-Charter-Active'] %}
+	<div id="charter-overlay"></div>
+	<section id="charter" class="ff">
+		<div id="charter-trigger" class="ff">{{ site['Charter-Trigger-Text'] }}</div>
+		<div id="charter-bg"></div>
+		<div id="charter-info">
+			<h1 class="inner-title"><span class="title-top">{{ site['Charter-Title'] }}</span></h1>
+			<div class="ff">
+				<div id="charter-banner" style="background-image: url({{ site['Charter-Banner'] }})"></div>
+				<div id='charter-description'>
+					{{ site['Charter-Description'] | markdownify }}
+				</div>
+			</div>
+		</div>
+		<div id="charter-characters">
+			<h1 class="inner-title"><span class="title-top">Participants</span></h1>
+
+			{% if site['Charter-Join-Embed'] %}
+			<a class="relation ff join-link" onclick="$('#form').toggleClass('open')">
+				<span class="relation-name inner-title">JOIN</span>
+			</a>
+			<div class='relation ff' id="form">
+				{{ site['Charter-Join-Embed'] }}
+			</div>
+			{% endif %}
+			
+			{% for relation in site.charter-chars %}
+				<div class="relation ff">
+					<div class="relation-av ff"><img src="{{ relation['char-image'] }}"></div>
+					<span class="relation-name inner-title">{{ relation.title }}</span>
+					<span class="relation-type">{{ relation['subtitle'] }}</span>
+					<span class="relation-summary">{{ relation.content | markdownify }}</span>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	{% endif %}
+
 	<script>
 		var items = {
 			"ss-items": {			
@@ -274,6 +312,7 @@
 			}, 
 		};
 
+		//init music
 		const select = new Howl({
 			src: ['./pyre_life_sentence.mp3'],
 			loop: true,
@@ -282,23 +321,191 @@
 		select.credit = "Darren Korb - Life Sentence"
 
 		const char1 = new Howl({
-			src: ['./severance.mp3'],
+			src: ['{{ site["SS-Music"] }}'],
 			loop: true,
 			volume: 0
 		});
-		char1.credit = "Joel Louviere / Sokkycakes - Severance"
+		char1.credit = "{{ site['SS-Music-Credit'] }}"
 
 		const char2 = new Howl({
-			src: ['./martyrs_blood.mp3'],
+			src: ['{{ site["EC-Music"] }}'],
 			loop: true,
 			volume: 0
 		});
-		char2.credit = "Corey Vitalis - Martyr's Blood"
+		char2.credit = "{{ site['EC-Music-Credit'] }}"
+
+		const charter = new Howl({
+			src: ['{{ site["Charter-Music"] }}'],
+			loop: true,
+			volume: 0
+		});
+		charter.credit = "{{ site['Charter-Music-Credit'] }}"
 
 		Howler.volume(0);
 
 		var currentTheme = select;
 		var nextTheme;
+
+		{% if site['Is-SFX-Enabled'] %}
+		//init static sfx
+		const char1hover = new Howl({
+			src: ["{{ site['SS-SFX-Portrait-Hover-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char1click = new Howl({
+			src: ["{{ site['SS-SFX-Portrait-Click-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+		const char1btnhover = new Howl({
+			src: ["{{ site['SS-SFX-Button-Hover-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char1btnclick = new Howl({
+			src: ["{{ site['SS-SFX-Button-Click-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char2hover = new Howl({
+			src: ["{{ site['EC-SFX-Portrait-Hover-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char2click = new Howl({
+			src: ["{{ site['EC-SFX-Portrait-Click-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char2btnhover = new Howl({
+			src: ["{{ site['EC-SFX-Button-Hover-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const char2btnclick = new Howl({
+			src: ["{{ site['EC-SFX-Button-Click-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const charterhover = new Howl({
+			src: ["{{ site['Charter-SFX-Hover-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		const charterclick = new Howl({
+			src: ["{{ site['Charter-SFX-Click-File'] }}"],
+			volume: 1,
+			preload: true
+		});
+
+		$('#char1').on('mouseenter', function() {
+			if($('body').attr('id') == 'loaded') {
+				char1hover.play();
+			}
+		});
+
+		$('#char1').on('mousedown', function() {
+			if($('body').attr('id') == 'loaded') {
+				char1click.play();
+			}
+		});
+
+		$('#char1-info .collapsible').on('mouseenter', function() {
+			char1btnhover.play();
+		});
+
+		$('#char1-info .collapsible').on('mousedown', function() {
+			char1btnclick.play();
+		});
+
+		$('#char2').on('mouseenter', function() {
+			if($('body').attr('id') == 'loaded') {
+				char2hover.play();
+			}
+		});
+
+		$('#char2').on('mousedown', function() {
+			if($('body').attr('id') == 'loaded') {
+				char2click.play();
+			}
+		});
+
+		$('#char2-info .collapsible').on('mouseenter', function() {
+			char2btnhover.play();
+		});
+
+		$('#char2-info .collapsible').on('mousedown', function() {
+			char2btnclick.play();
+		});
+
+		$('#charter-trigger').on('mouseenter', function() {
+			charterhover.play();
+		});
+
+		$('#charter-trigger').on('mousedown', function() {
+			charterclick.play();
+		});
+
+		//dynamic sfx
+		const dynamicSFX = {
+			//{% for item in site.ss-items %}
+			{{ item.sfx-hover-file | slugify | replace: '-', '_'}}: new Howl({
+				src: ["{{ item.sfx-hover-file }}"],
+				volume: 1,
+				preload: true
+			}),
+
+			{{ item.sfx-click-file | slugify | replace: '-', '_'}}: new Howl({
+				src: ["{{ item.sfx-click-file }}"],
+				volume: 1,
+				preload: true
+			}),
+			//{% endfor %}
+			//{% for item in site.ec-items %}
+			{{ item.sfx-hover-file | slugify | replace: '-', '_'}}: new Howl({
+				src: ["{{ item.sfx-hover-file }}"],
+				volume: 1,
+				preload: true
+			}),
+
+			{{ item.sfx-click-file | slugify | replace: '-', '_'}}: new Howl({
+				src: ["{{ item.sfx-click-file }}"],
+				volume: 1,
+				preload: true
+			}),
+			//{% endfor %}
+		}
+
+		//enable per item
+		//{% for item in site.ss-items %}
+		$('.item-{{ item.slug }}').on('mouseenter', function(){
+			dynamicSFX.{{item.sfx-hover-file | slugify | replace: "-", "_"}}.play();
+		})
+
+		$('.item-{{ item.slug }}').on('click', function(){
+			dynamicSFX.{{item.sfx-click-file | slugify | replace: "-", "_"}}.play();
+		})
+		//{% endfor %}
+		//{% for item in site.ec-items %}
+		$('.item-{{ item.slug }}').on('mouseenter', function(){
+			dynamicSFX.{{item.sfx-hover-file | slugify | replace: "-", "_"}}.play();
+		})
+
+		$('.item-{{ item.slug }}').on('click', function(){
+			dynamicSFX.{{item.sfx-click-file | slugify | replace: "-", "_"}}.play();
+		})
+		//{% endfor %}
+		
+		//{% endif %} //ending the 'if sfx is enabled' one
 
 		var timeout = false;
 		function fadeTo(newTheme) {
@@ -318,7 +525,6 @@
 			$('#credit').text(currentTheme.credit);
 		}
 
-
 		function endIntro() { 
 			$('body').removeClass('pre-select');
 			$('body').addClass('post-intro');
@@ -328,6 +534,7 @@
 		$('#yesaudio, #noaudio').on('click', function(){
 			
 			$('body').addClass('pre-select');
+			$('body').attr('id', 'loaded');
 			$('body').on('mousedown', endIntro);
 			setTimeout(function(){
 				endIntro();
@@ -433,20 +640,30 @@
 		var i;
 
 		for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			if (content.style.maxHeight){
-				content.style.maxHeight = null;
-				content.style.opacity = 0;
-				content.style.marginBottom = 0;
-			} else {
-				content.style.maxHeight = content.scrollHeight + "px";
-				content.style.opacity = 1;
-				content.style.marginBottom = "10px";
-			} 
-		});
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+					content.style.opacity = 0;
+					content.style.marginBottom = 0;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					content.style.opacity = 1;
+					content.style.marginBottom = "10px";
+				} 
+			});
 		}
+
+		/* charter */
+		$('#charter-trigger, #charter-overlay').on('click', function(){
+			$('body').toggleClass('charter-open');
+			if($('body').hasClass('charter-open')){
+				fadeTo(charter)
+			} else {
+				fadeTo(select)
+			}
+		});
 	</script>
 
 </body>
