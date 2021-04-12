@@ -350,51 +350,61 @@
 		//init static sfx
 		const char1hover = new Howl({
 			src: ["{{ site['SS-SFX-Portrait-Hover-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char1click = new Howl({
 			src: ["{{ site['SS-SFX-Portrait-Click-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 		const char1btnhover = new Howl({
 			src: ["{{ site['SS-SFX-Button-Hover-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char1btnclick = new Howl({
 			src: ["{{ site['SS-SFX-Button-Click-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char2hover = new Howl({
 			src: ["{{ site['EC-SFX-Portrait-Hover-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char2click = new Howl({
 			src: ["{{ site['EC-SFX-Portrait-Click-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char2btnhover = new Howl({
 			src: ["{{ site['EC-SFX-Button-Hover-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const char2btnclick = new Howl({
 			src: ["{{ site['EC-SFX-Button-Click-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const charterhover = new Howl({
 			src: ["{{ site['Charter-SFX-Hover-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		const charterclick = new Howl({
 			src: ["{{ site['Charter-SFX-Click-File'] }}"],
-			volume: 1
+			volume: 1,
+			preload: true
 		});
 
 		$('#char1').on('mouseenter', function() {
@@ -450,23 +460,27 @@
 			//{% for item in site.ss-items %}
 			{{ item.sfx-hover-file | slugify | replace: '-', '_'}}: new Howl({
 				src: ["{{ item.sfx-hover-file }}"],
-				volume: 1
+				volume: 1,
+				preload: true
 			}),
 
 			{{ item.sfx-click-file | slugify | replace: '-', '_'}}: new Howl({
 				src: ["{{ item.sfx-click-file }}"],
-				volume: 1
+				volume: 1,
+				preload: true
 			}),
 			//{% endfor %}
 			//{% for item in site.ec-items %}
 			{{ item.sfx-hover-file | slugify | replace: '-', '_'}}: new Howl({
 				src: ["{{ item.sfx-hover-file }}"],
-				volume: 1
+				volume: 1,
+				preload: true
 			}),
 
 			{{ item.sfx-click-file | slugify | replace: '-', '_'}}: new Howl({
 				src: ["{{ item.sfx-click-file }}"],
-				volume: 1
+				volume: 1,
+				preload: true
 			}),
 			//{% endfor %}
 		}
@@ -520,6 +534,7 @@
 		$('#yesaudio, #noaudio').on('click', function(){
 			
 			$('body').addClass('pre-select');
+			$('body').attr('id', 'loaded');
 			$('body').on('mousedown', endIntro);
 			setTimeout(function(){
 				endIntro();
