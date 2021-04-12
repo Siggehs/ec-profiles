@@ -99,7 +99,7 @@ url: "."
 repository: crekulon/ec-profiles
 Is-SFX-Enabled: false
 EC-Subtitle: yea of burning heart
-EC-Music: "/martyrs_blood.mp3"
+EC-Music-File: "/martyrs_blood.mp3"
 EC-Music-Credit: Corey Vitalis - Martyrs Blood
 EC-SFX-Portrait-Hover-File: 
 EC-SFX-Portrait-Click-File: 
@@ -110,7 +110,7 @@ SS-SFX-Portrait-Hover-File:
 SS-SFX-Portrait-Click-File: 
 SS-SFX-Button-Hover-File: 
 SS-SFX-Button-Click-File: 
-SS-Music: "/severance.mp3"
+SS-Music-File: "/severance.mp3"
 SS-Music-Credit: Joel Louviere / Sokkycakes - Severance
 Is-Charter-Active: false
 Charter-Trigger-Text: Da Charta
@@ -124,5 +124,5 @@ Charter-Join-Embed: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv2ro
   width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 Charter-SFX-Hover-File: 
 Charter-SFX-Click-File: 
-Charter-Music: "/martyrs_blood.mp3"
+Charter-Music-File: "/martyrs_blood.mp3"
 Charter-Music-Credit: Corey Vitalis - Martyrs Blood
