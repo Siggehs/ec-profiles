@@ -114,17 +114,17 @@ SS-SFX-Button-Hover-File:
 SS-SFX-Button-Click-File: 
 SS-Music-File: "/severance.mp3"
 SS-Music-Credit: Joel Louviere / Sokkycakes - Severance
-Is-Charter-Active: false
-Charter-Trigger-Text: Da Charta
-Charter-Title: yea of froggening mind
+Is-Charter-Active: true
+Charter-Trigger-Text: Stranger Campaigns
+Charter-Title: Highly WIP!
 Charter-Description: |-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et sapien porttitor, facilisis augue non, hendrerit lectus. Morbi non turpis sit amet est aliquet efficitur. Etiam a malesuada purus. Cras et ullamcorper elit, eget finibus velit. Aenean consequat, magna ac aliquet tincidunt, quam sapien tempor lorem, eget scelerisque leo ante a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum molestie velit, in lobortis diam dapibus eu. Pellentesque egestas eu erat eu gravida.
 
   Nunc pulvinar nec odio eget ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae porttitor nibh. Vestibulum sed lacus rutrum, ornare mauris et, blandit erat. Morbi eleifend molestie eros, vel laoreet libero auctor sit amet. Duis sit amet laoreet turpis. Sed ut turpis porttitor, porta sapien sed, tempus eros. Integer rutrum laoreet lorem, a pulvinar arcu. Suspendisse sodales placerat dui non porta. Integer congue scelerisque nulla, at pellentesque ex consectetur sed. Vestibulum odio sapien, tincidunt ac commodo at, dictum laoreet sem. Nullam sit amet condimentum neque, sit amet porta nunc. Aenean dui nibh, consequat a lacus ac, blandit eleifend tellus. Duis efficitur, tortor eget bibendum pretium, diam libero molestie arcu, vitae volutpat mi dui eu urna. Donec placerat arcu at gravida imperdiet. Nunc dignissim rhoncus felis ut vulputate.
-Charter-Banner: "/uploads/2020-12-20_02-07-41-126_Talim%20-%20Simplicity.png"
+Charter-Banner: 
 Charter-Join-Embed: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv2roVSiXaLGEMskr_lxE2l9rlC9PevgH3tmB-aRIORl4UHg/viewform?embedded=true"
   width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 Charter-SFX-Hover-File: 
 Charter-SFX-Click-File: 
-Charter-Music-File: "/martyrs_blood.mp3"
-Charter-Music-Credit: Corey Vitalis - Martyrs Blood
+Charter-Music-File: "/uploads/Team%20Fortress%202%20Soundtrack%20Upgrade%20Station.mp3"
+Charter-Music-Credit: Mike Morasky - Upgrade Station
