@@ -1054,8 +1054,14 @@ opacity: 0;
     transition: max-height 1s ease-in-out;
 }
 
+#form.relation::before {
+	z-index: 10;
+	mix-blend-mode: hard-light;
+}
+
 #form iframe {
     width: 100% !important;
+	mix-blend-mode: luminosity
 }
 
 #form.open {
