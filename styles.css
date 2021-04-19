@@ -1005,14 +1005,18 @@ opacity: 0;
 }
 
 #charter-banner {
-    width: calc(100% - 2px);
-    height: 40vh;
+    width: auto;
+    height: auto;
     background: green;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     margin: auto;
     border-bottom: 3px solid #8a7c57;
+}
+
+#charter-banner img {
+    max-width: 100%;
 }
 
 #charter-bg {
