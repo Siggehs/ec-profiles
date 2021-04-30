@@ -254,37 +254,39 @@
 	{% if site['Is-Charter-Active'] %}
 	<div id="charter-overlay"></div>
 	<section id="charter" class="ff">
-		<div id="charter-trigger" class="ff">{{ site['Charter-Trigger-Text'] }}</div>
-		<div id="charter-bg"></div>
-		<div id="charter-info">
-			<h1 class="inner-title"><span class="title-top">{{ site['Charter-Title'] }}</span></h1>
-			<div class="ff">
-				<div id="charter-banner"><img src="{{ site['Charter-Banner'] }}"></div>
-				<div id='charter-description'>
-					{{ site['Charter-Description'] | markdownify }}
+		<div id="charter-content">
+			<div id="charter-trigger" class="ff">{{ site['Charter-Trigger-Text'] }}</div>
+			<div id="charter-bg"></div>
+			<div id="charter-info">
+				<h1 class="inner-title"><span class="title-top">{{ site['Charter-Title'] }}</span></h1>
+				<div class="ff">
+					<div id="charter-banner"><img src="{{ site['Charter-Banner'] }}"></div>
+					<div id='charter-description'>
+						{{ site['Charter-Description'] | markdownify }}
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="charter-characters">
-			<h1 class="inner-title"><span class="title-top">Participants</span></h1>
+			<div id="charter-characters">
+				<h1 class="inner-title"><span class="title-top">Participants</span></h1>
 
-			{% if site['Charter-Join-Embed'] %}
-			<a class="relation ff join-link" onclick="$('#form').toggleClass('open')">
-				<span class="relation-name inner-title">JOIN</span>
-			</a>
-			<div class='relation ff' id="form">
-				{{ site['Charter-Join-Embed'] }}
-			</div>
-			{% endif %}
-			
-			{% for relation in site.charter-chars %}
-				<div class="relation ff">
-					<div class="relation-av ff"><img src="{{ relation['char-image'] }}"></div>
-					<span class="relation-name inner-title">{{ relation.title }}</span>
-					<span class="relation-type">{{ relation['subtitle'] }}</span>
-					<span class="relation-summary">{{ relation.content | markdownify }}</span>
+				{% if site['Charter-Join-Embed'] %}
+				<a class="relation ff join-link" onclick="$('#form').toggleClass('open')">
+					<span class="relation-name inner-title">JOIN</span>
+				</a>
+				<div class='relation ff' id="form">
+					{{ site['Charter-Join-Embed'] }}
 				</div>
-			{% endfor %}
+				{% endif %}
+				
+				{% for relation in site.charter-chars %}
+					<div class="relation ff">
+						<div class="relation-av ff"><img src="{{ relation['char-image'] }}"></div>
+						<span class="relation-name inner-title">{{ relation.title }}</span>
+						<span class="relation-type">{{ relation['subtitle'] }}</span>
+						<span class="relation-summary">{{ relation.content | markdownify }}</span>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</section>
 	{% endif %}

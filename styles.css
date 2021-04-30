@@ -950,6 +950,14 @@ opacity: 0;
     transform: translateY(100%);
 }
 
+#charter-content {
+	display: flex;
+	align-items: flex-start;
+	overflow-y: auto;
+	max-height: 88vh;
+	padding-bottom: 10px;
+}
+
 #charter-overlay {
     z-index: 8;
     height: 100%;
@@ -976,11 +984,6 @@ opacity: 0;
 
 #charter-info .ff {
     padding: 0;
-}
-
-#charter-description {
-    overflow-y: auto;
-    max-height: 45.5vh;
 }
 
 #charter-description p {
