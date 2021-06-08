@@ -922,6 +922,7 @@ opacity: 0;
     color: #95907c;
     text-shadow: 0px -1px 0px #f7f7f7, 0px 0px 0px #959595, 0px 1px 0px #4a4a4a;
     font-size: calc(1em + 1vw);
+	filter: drop-shadow(0 0 7px #ecdb9d);
 }
 
 #charter-trigger::after, #charter-trigger::before {
